@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PassMan</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Password Manager</h2>
+        <div class="login-form">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <br/>
+            <button id="login-btn">Login</button>
+        </div>
+        <div class="signup-form">
+            <input type="text" id="new-username" placeholder="New Username">
+            <input type="password" id="new-password" placeholder="New Password">
+            <button id="signup-btn">Sign Up</button>
+        </div>
+        <div class="password-list">
+            <ul id="passwords"></ul>
+        </div>
+        <button id="logout-btn">Logout</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

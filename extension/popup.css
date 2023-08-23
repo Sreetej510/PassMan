@@ -1,0 +1,22 @@
+body {
+    width: 300px;
+    padding: 10px;
+}
+
+.container {
+    text-align: center;
+}
+
+.login-form,
+.signup-form {
+    display: none;
+}
+ 
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+button {
+    margin-top: 10px;
+}
