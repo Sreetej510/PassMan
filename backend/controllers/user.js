@@ -8,7 +8,7 @@ const refreshPrivateKey = fs.readFileSync(process.env.REFRESH_PRIVATE_KEY_FILE, 
 const refreshPublicKey = fs.readFileSync(process.env.REFRESH_PUBLIC_KEY_FILE, 'utf8');
 
 function generateRefreshToken(issuer) {
-  return jwt.sign({ issuer }, refreshPrivateKey, { expiresIn: '10d', algorithm: 'RS256' });
+  return jwt.sign({}, refreshPrivateKey, { expiresIn: '10d', algorithm: 'RS256', issuer });
 }
 
 function generateAccessToken(username) {

@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const https = require('https');
 const crypto = require('crypto');
+var cors = require('cors')
 
 const userRoutes = require('./routes/user.js');
 const passwordRoutes = require('./routes/password.js');
@@ -11,6 +12,7 @@ const refreshTokenRoutes = require('./routes/refreshToken.js');
 
 const PORT = process.env.PORT;
 
+app.use(cors())
 app.use(express.json());
 
 // Use the user and password routes
