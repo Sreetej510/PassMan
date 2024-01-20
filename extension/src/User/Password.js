@@ -1,10 +1,12 @@
 import React from 'react';
+import PasswordItem from './PasswordItem';
+
+import './Password.css'
 
 function Password() {
   return (
     <div>
-      <h2>User Page</h2>
-      {/* Your user page content goes here */}
+      <PasswordItem url="example.com" username='sreetej' password='password'/>
     </div>
   );
 }
