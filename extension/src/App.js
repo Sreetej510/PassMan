@@ -1,9 +1,9 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './User/Login';
-import Signup from './User/Signup';
-import Password from './User/Password.js';
+import Login from './user/Login';
+import Signup from './user/Signup';
+import PasswordListPage from './password/PasswordListPage.js';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/password" element={<Password />} />
+        <Route path="/password" element={<PasswordListPage />} />
         {/* Add a default route for handling other paths */}
         <Route path="/*" element={<Login />} />
       </Routes>
