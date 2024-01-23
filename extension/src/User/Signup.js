@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { checkLogin } from '../js/loginCheck.js';
 
 import './Signup.css';
+import InputBar from '../utils/InputBar.js';
 
 function Signup() {
   const [username, setUsername] = useState('');
@@ -59,21 +60,21 @@ function Signup() {
     <div className='userFormContainer'>
       <form className='userForm' onSubmit={handleSignup}>
         <h2>Signup</h2>
-        <input
+        <InputBar
           type="text"
-          placeholder="Username"
+          label="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <input
+        <InputBar
           type="password"
-          placeholder="Password"
+          label="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <input
+        <InputBar
           type="password"
-          placeholder="Re-enter Password"
+          label="Re-enter Password"
           value={passwordCheck}
           onChange={(e) => setPasswordCheck(e.target.value)}
         />

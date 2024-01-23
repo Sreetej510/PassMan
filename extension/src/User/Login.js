@@ -5,6 +5,7 @@ import { checkLogin } from '../js/loginCheck.js';
 import { useNavigate } from "react-router-dom";
 
 import './Login.css';
+import InputBar from '../utils/InputBar.js';
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -49,18 +50,8 @@ function Login() {
     <div className='userFormContainer'>
       <form className='userForm' onSubmit={handleLogin}>
         <h2>Login</h2>
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <InputBar label="Username" type="text" onChange={(e) => setUsername(e.target.value)} value={username}/>
+        <InputBar label="Password" type="password" onChange={(e) => setPassword(e.target.value)} value={password}/>
         <div className='errorMsg'>{errorMsg}</div>
         <button type='Submit'>Login</button>
       </form>
