@@ -1,39 +1,80 @@
-
 .input-box {
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    color: #000000;
-    justify-content: left;
-    margin: 8px 0;
-  }
-  
-  .input {
-    color: #000000;
-    padding: 10px;
-    width: calc(100% - 20px);
-    border: 1.5px solid #00000066;
-    border-radius: 15px;
-    transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .label {
-    position: absolute;
-    font-size: 12px;
-    top: 12px;
-    left: 10px;
-    color: #000000;
-    pointer-events: none;
-    transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .input:focus {
-    border: 1.5px solid #000000;
-    color: #000000;
-  }
-  
-  .input:is(:focus, :valid) ~ label {
-    transform: translateY(-130%) scale(0.85);
-    background-color: #fafafa;
-    padding-inline: 5px;
-  }
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  color: #000000;
+  justify-content: left;
+  margin: 8px 0;
+}
+
+.input {
+  color: #000000;
+  padding: 10px;
+  width: calc(100% - 20px);
+  border: 1.5px solid #00000066;
+  border-radius: 15px;
+  transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.label {
+  position: absolute;
+  font-size: 12px;
+  top: 12px;
+  left: 10px;
+  color: #000000;
+  pointer-events: none;
+  transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.label.has-value,
+.input:focus + label {
+  transform: translateY(-130%) scale(0.85);
+  background-color: #fafafa;
+  padding-inline: 5px;
+}
+
+.input:focus {
+  border: 1.5px solid #000000;
+  color: #000000;
+}
+
+.input:disabled {
+  border: 1.5px solid #56565666;
+  background-color: #cdcdcd66;
+  color: #656565;
+}
+
+.input:disabled + label{
+  color: #656565;
+}
+
+.input-box > .buttons {
+  position: absolute;
+  display: flex;
+  top: 7px;
+  right: 7px;
+}
+
+.copyBtn,
+.passwdShowBtn {
+  background-color: transparent;
+  border: none;
+  border-radius: 20px;
+  height: 23px;
+  width: 23px;
+  padding: 3.5px;
+  z-index: 100;
+  margin-left: 4px;
+}
+
+.copyBtn:hover,
+.passwdShowBtn:hover{
+  background-color: #d8d8d8;
+  cursor: pointer;
+}
+
+.copyBtn > svg,
+.passwdShowBtn > svg{
+  height: 16px;
+  width: 16px;
+}

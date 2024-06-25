@@ -51,7 +51,7 @@ function Login() {
       <form className='userForm' onSubmit={handleLogin}>
         <h2>Login</h2>
         <InputBar label="Username" type="text" onChange={(e) => setUsername(e.target.value)} value={username}/>
-        <InputBar label="Password" type="password" onChange={(e) => setPassword(e.target.value)} value={password}/>
+        <InputBar label="Password" type="password" onChange={(e) => setPassword(e.target.value)} value={password} passwdShow={true}/>
         <div className='errorMsg'>{errorMsg}</div>
         <button type='Submit'>Login</button>
       </form>

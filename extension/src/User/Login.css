@@ -19,7 +19,7 @@
     color: #333;
 }
 
-.userForm button {
+.userForm > button {
     width: 60%;
     padding: 10px;
     margin: 20px 20%;
@@ -33,7 +33,7 @@
     transition: 300ms ease-in-out;
 }
 
-.userForm button:hover {
+.userForm > button:hover {
     background-color: #fff;
     color: #000000;
 }

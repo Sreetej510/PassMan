@@ -1,0 +1,48 @@
+
+
+
+
+
+
+
+.detailsItem {
+    border-radius: 5px;
+    box-shadow: #0005 0px 1px 2px 0px, #0003 0px 2px 6px 2px;
+    padding: 10px;
+}
+
+.detailsItem > .sitesList{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+.detailsItem > .sitesList > a{
+    font-weight: 400;
+    color: #545454;
+    font-size: 14px;
+}
+
+.detailsItem > .buttons{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+.detailsItem > .buttons > button{
+    margin: 0 5px;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid #000;
+    cursor: pointer;
+    color: #000;
+    background-color: #fafafa;
+    transition: all ease-in-out 300ms;
+}
+
+.detailsItem > .buttons > button:hover{
+    background-color: #000;
+    color: #fafafa;
+}
